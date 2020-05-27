@@ -12,9 +12,9 @@
 <xacro:include filename="lidar.xacro" />
 
 <!--<xacro:wheel side="left" />-->
-	<xacro:wheel_with_joint parent_name="chassis" pre_name="base" frontal_name="link" left="1" radius="${wheel_radius}" heigth="${wheel_heigth}" jointX="0" jointY="0.15" jointZ="0">
+	<xacro:wheel_with_joint parent_name="chassis" left="1" radius="${wheel_radius}" heigth="${wheel_heigth}" jointX="0" jointY="0.15" jointZ="0">
 	</xacro:wheel_with_joint>
-    <xacro:wheel_with_joint parent_name="chassis" pre_name="base" frontal_name="link" left="0" radius="${wheel_radius}" heigth="${wheel_heigth}" jointX="0" jointY="0.15" jointZ="0">
+    <xacro:wheel_with_joint parent_name="chassis" left="0" radius="${wheel_radius}" heigth="${wheel_heigth}" jointX="0" jointY="0.15" jointZ="0">
 	</xacro:wheel_with_joint>
 
     <xacro:camera name="camera" />
