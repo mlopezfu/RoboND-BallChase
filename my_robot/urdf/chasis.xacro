@@ -26,43 +26,45 @@
     <collision name='collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
-        <box size=".4 .2 .1"/>
+        <!--<box size="${chassis_box_x} ${chassis_box_y} ${chassis_box_z}"/>-->
+        <cylinder radius="${chassis_r}" length="${chassis_h}"/>
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <box size=".4 .2 .1"/>
+        <!--<box size="${chassis_box_x} ${chassis_box_y} ${chassis_box_z}"/>-->
+        <cylinder radius="${chassis_r}" length="${chassis_h}"/>
       </geometry>
     </visual>
 
 
     <collision name='back_caster_collision'>
-      <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
+      <origin xyz="${-chassis_r+0.05} 0 ${-chassis_h/2}" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.0499"/>
+        <sphere radius="${wheel_radius-chassis_h/2}"/>
       </geometry>
     </collision>
 
     <visual name='back_caster_visual'>
-      <origin xyz="-0.15 0 -0.05" rpy=" 0 0 0"/>
+      <origin xyz="${-chassis_r+0.05} 0 ${-chassis_h/2}" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.05"/>
+        <sphere radius="${wheel_radius-chassis_h/2}"/>
       </geometry>
     </visual>
 
     <collision name='front_caster_collision'>
-      <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
+      <origin xyz="${+chassis_r-0.05} 0 ${-chassis_h/2}" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.0499"/>
+        <sphere radius="${wheel_radius-chassis_h/2}"/>
       </geometry>
     </collision>
 
     <visual name='front_caster_visual'>
-      <origin xyz="0.15 0 -0.05" rpy=" 0 0 0"/>
+      <origin xyz="${+chassis_r-0.05} 0 ${-chassis_h/2}" rpy=" 0 0 0"/>
       <geometry>
-        <sphere radius="0.05"/>
+        <sphere radius="${wheel_radius-chassis_h/2}"/>
       </geometry>
     </visual>
 

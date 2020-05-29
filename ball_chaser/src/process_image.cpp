@@ -63,15 +63,15 @@ void process_image_callback(const sensor_msgs::Image img)
                 ROS_INFO("White pixel in index:%d, height:%d", position_index,i);
                 if(position_index<420)
                 { // First third rotate left
-                    drive_robot(0.0, 0.1);        
+                    drive_robot(0.0, 0.15);        
                 }
                 else if(position_index>500)
                 { //Third third rotate right
-                    drive_robot(0.0, -0.1);  
+                    drive_robot(0.0, -0.15);  
                 }
                 else
                 {
-                    drive_robot(0.2, 0.0);  
+                    drive_robot(0.3, 0.0);  
                 }
             }
             else
